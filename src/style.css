@@ -72,19 +72,19 @@ main {
 }
 
 .weather-icon {
-  font-size: 44px;
-  margin-top: 20px;
+  width: 88px;
+  height: 88px;
 }
 
 .weather-temp {
   font-size: 88px;
   font-weight: bold;
-  margin-left: 10px;
+  line-height: 88px;
 }
 
 .weather-unit {
   font-size: 28px;
-  margin-top: 15px;
+  margin-top: 6px;
 }
 
 footer {
