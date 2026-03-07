@@ -13,7 +13,7 @@ function displayTemperature(response) {
   timeElement.innerHTML = formatDate(date);
   descriptionElement.innerHTML = response.data.condition.description;
   humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
-  windSpeedElement.innerHTML = `${response.data.wind.speed} km/h`;
+  windSpeedElement.innerHTML = `${response.data.wind.speed} mph`;
   iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="weather-icon"/>`;
   temperatureElement.innerHTML = Math.round(temperature);
 }
@@ -39,7 +39,7 @@ function formatDate(date) {
 
 function searchCity(city) {
   let apiKey = "5a6cade0fb0235906516oefa5tf3413e";
-  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=imperial`;
   axios.get(apiUrl).then(displayTemperature);
 }
 
